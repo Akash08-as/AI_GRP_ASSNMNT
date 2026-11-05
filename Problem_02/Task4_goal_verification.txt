@@ -1,0 +1,248 @@
+=======================================================================
+Task 4 -- Goal Verification (simulate_plan.py; plans produced by Fast Downward on Google Colab)
+=======================================================================
+========================================================================
+Problem: Problem.pddl
+Plan   : Problem_satisficing.soln
+========================================================================
+  step  1: (move curiosity base sitea)
+  step  2: (collect-soft curiosity rock1 sitea bay1)
+  step  3: (move curiosity sitea base)
+  step  4: (deposit curiosity rock1 base bay1)
+  step  5: (move curiosity base siteb)
+  step  6: (collect-soft curiosity rock2 siteb bay1)
+  step  7: (move curiosity siteb base)
+  step  8: (deposit curiosity rock2 base bay1)
+  step  9: (move curiosity base sitea)
+  step 10: (move curiosity sitea sitec)
+  step 11: (move curiosity sitec sitee)
+  step 12: (pick-drill curiosity drill1 sitee)
+  step 13: (move curiosity sitee sitec)
+  step 14: (collect-hard curiosity rock3 sitec bay1 drill1)
+  step 15: (move curiosity sitec sited)
+  step 16: (collect-soft curiosity rock4 sited bay2)
+  step 17: (move curiosity sited siteb)
+  step 18: (move curiosity siteb base)
+  step 19: (deposit curiosity rock3 base bay1)
+  step 20: (deposit curiosity rock4 base bay2)
+  step 21: (move curiosity base sitea)
+  step 22: (move curiosity sitea sitec)
+  step 23: (move curiosity sitec sitee)
+  step 24: (move curiosity sitee sitef)
+  step 25: (collect-hard curiosity rock5 sitef bay1 drill1)
+  step 26: (move curiosity sitef sitee)
+  step 27: (move curiosity sitee sitec)
+  step 28: (move curiosity sitec sitea)
+  step 29: (move curiosity sitea base)
+  step 30: (deposit curiosity rock5 base bay1)
+
+  Total actions executed: 30
+
+  --- Final state ---
+  Rover at              : ['base']
+  Rocks at base         : ['rock1', 'rock2', 'rock3', 'rock4', 'rock5']
+  Empty bays            : ['bay1', 'bay2']
+  Rocks still in bays   : []
+
+  --- Goal check ---
+  (rock-at rock1 base)                   SATISFIED
+  (rock-at rock2 base)                   SATISFIED
+  (rock-at rock3 base)                   SATISFIED
+  (rock-at rock4 base)                   SATISFIED
+  (rock-at rock5 base)                   SATISFIED
+  (bay-empty bay1)                       SATISFIED
+  (bay-empty bay2)                       SATISFIED
+  (at curiosity base)                    SATISFIED
+
+  GOAL SATISFIED: True   (plan length = 30)
+
+========================================================================
+Problem: Problem.pddl
+Plan   : Problem_optimal.soln
+========================================================================
+  step  1: (move curiosity base siteb)
+  step  2: (collect-soft curiosity rock2 siteb bay1)
+  step  3: (move curiosity siteb sited)
+  step  4: (collect-soft curiosity rock4 sited bay2)
+  step  5: (move curiosity sited siteb)
+  step  6: (move curiosity siteb base)
+  step  7: (deposit curiosity rock2 base bay1)
+  step  8: (deposit curiosity rock4 base bay2)
+  step  9: (move curiosity base sitea)
+  step 10: (move curiosity sitea sitec)
+  step 11: (move curiosity sitec sitee)
+  step 12: (pick-drill curiosity drill1 sitee)
+  step 13: (move curiosity sitee sitef)
+  step 14: (collect-hard curiosity rock5 sitef bay1 drill1)
+  step 15: (move curiosity sitef sitee)
+  step 16: (move curiosity sitee sitec)
+  step 17: (collect-hard curiosity rock3 sitec bay2 drill1)
+  step 18: (move curiosity sitec sitea)
+  step 19: (move curiosity sitea base)
+  step 20: (deposit curiosity rock3 base bay2)
+  step 21: (deposit curiosity rock5 base bay1)
+  step 22: (move curiosity base sitea)
+  step 23: (collect-soft curiosity rock1 sitea bay1)
+  step 24: (move curiosity sitea base)
+  step 25: (deposit curiosity rock1 base bay1)
+
+  Total actions executed: 25
+
+  --- Final state ---
+  Rover at              : ['base']
+  Rocks at base         : ['rock1', 'rock2', 'rock3', 'rock4', 'rock5']
+  Empty bays            : ['bay1', 'bay2']
+  Rocks still in bays   : []
+
+  --- Goal check ---
+  (rock-at rock1 base)                   SATISFIED
+  (rock-at rock2 base)                   SATISFIED
+  (rock-at rock3 base)                   SATISFIED
+  (rock-at rock4 base)                   SATISFIED
+  (rock-at rock5 base)                   SATISFIED
+  (bay-empty bay1)                       SATISFIED
+  (bay-empty bay2)                       SATISFIED
+  (at curiosity base)                    SATISFIED
+
+  GOAL SATISFIED: True   (plan length = 25)
+
+========================================================================
+Problem: Problem_extended.pddl
+Plan   : Problem_extended_satisficing.soln
+========================================================================
+  step  1: (move curiosity base sitea)
+  step  2: (collect-soft curiosity rock1 sitea bay1)
+  step  3: (move curiosity sitea base)
+  step  4: (deposit curiosity rock1 base bay1)
+  step  5: (move curiosity base sitea)
+  step  6: (move curiosity sitea sitec)
+  step  7: (move curiosity sitec sitee)
+  step  8: (pick-drill curiosity drill1 sitee)
+  step  9: (move curiosity sitee sitec)
+  step 10: (collect-hard curiosity rock3 sitec bay1 drill1)
+  step 11: (move curiosity sitec sitea)
+  step 12: (move curiosity sitea base)
+  step 13: (deposit curiosity rock3 base bay1)
+  step 14: (move curiosity base sitea)
+  step 15: (move curiosity sitea sitec)
+  step 16: (move curiosity sitec sited)
+  step 17: (move curiosity sited siteb)
+  step 18: (collect-soft curiosity rock2 siteb bay1)
+  step 19: (move curiosity siteb sited)
+  step 20: (collect-soft curiosity rock4 sited bay2)
+  step 21: (move curiosity sited sitee)
+  step 22: (move curiosity sitee sitec)
+  step 23: (move curiosity sitec sitea)
+  step 24: (move curiosity sitea base)
+  step 25: (deposit curiosity rock2 base bay1)
+  step 26: (deposit curiosity rock4 base bay2)
+  step 27: (move curiosity base sitea)
+  step 28: (move curiosity sitea sitec)
+  step 29: (move curiosity sitec sitee)
+  step 30: (move curiosity sitee sitef)
+  step 31: (collect-hard curiosity rock5 sitef bay1 drill1)
+  step 32: (collect-hard curiosity rock7 sitef bay2 drill1)
+  step 33: (move curiosity sitef sitee)
+  step 34: (move curiosity sitee sitec)
+  step 35: (move curiosity sitec sitea)
+  step 36: (move curiosity sitea base)
+  step 37: (deposit curiosity rock5 base bay1)
+  step 38: (deposit curiosity rock7 base bay2)
+  step 39: (move curiosity base sitea)
+  step 40: (move curiosity sitea sitec)
+  step 41: (move curiosity sitec sitee)
+  step 42: (collect-soft curiosity rock6 sitee bay1)
+  step 43: (move curiosity sitee sitec)
+  step 44: (move curiosity sitec sitea)
+  step 45: (move curiosity sitea base)
+  step 46: (deposit curiosity rock6 base bay1)
+
+  Total actions executed: 46
+
+  --- Final state ---
+  Rover at              : ['base']
+  Rocks at base         : ['rock1', 'rock2', 'rock3', 'rock4', 'rock5', 'rock6', 'rock7']
+  Empty bays            : ['bay1', 'bay2']
+  Rocks still in bays   : []
+
+  --- Goal check ---
+  (rock-at rock1 base)                   SATISFIED
+  (rock-at rock2 base)                   SATISFIED
+  (rock-at rock3 base)                   SATISFIED
+  (rock-at rock4 base)                   SATISFIED
+  (rock-at rock5 base)                   SATISFIED
+  (rock-at rock6 base)                   SATISFIED
+  (rock-at rock7 base)                   SATISFIED
+  (bay-empty bay1)                       SATISFIED
+  (bay-empty bay2)                       SATISFIED
+  (at curiosity base)                    SATISFIED
+
+  GOAL SATISFIED: True   (plan length = 46)
+
+========================================================================
+Problem: Problem_extended.pddl
+Plan   : Problem_extended_optimal.soln
+========================================================================
+  step  1: (move curiosity base sitea)
+  step  2: (move curiosity sitea sitec)
+  step  3: (move curiosity sitec sited)
+  step  4: (collect-soft curiosity rock4 sited bay1)
+  step  5: (move curiosity sited siteb)
+  step  6: (collect-soft curiosity rock2 siteb bay2)
+  step  7: (move curiosity siteb sited)
+  step  8: (move curiosity sited sitee)
+  step  9: (pick-drill curiosity drill1 sitee)
+  step 10: (move curiosity sitee sitec)
+  step 11: (move curiosity sitec sitea)
+  step 12: (move curiosity sitea base)
+  step 13: (deposit curiosity rock2 base bay2)
+  step 14: (deposit curiosity rock4 base bay1)
+  step 15: (move curiosity base sitea)
+  step 16: (move curiosity sitea sitec)
+  step 17: (move curiosity sitec sitee)
+  step 18: (move curiosity sitee sitef)
+  step 19: (collect-hard curiosity rock5 sitef bay1 drill1)
+  step 20: (collect-hard curiosity rock7 sitef bay2 drill1)
+  step 21: (move curiosity sitef sitee)
+  step 22: (move curiosity sitee sitec)
+  step 23: (move curiosity sitec sitea)
+  step 24: (move curiosity sitea base)
+  step 25: (deposit curiosity rock5 base bay1)
+  step 26: (deposit curiosity rock7 base bay2)
+  step 27: (move curiosity base sitea)
+  step 28: (move curiosity sitea sitec)
+  step 29: (collect-hard curiosity rock3 sitec bay1 drill1)
+  step 30: (move curiosity sitec sitee)
+  step 31: (collect-soft curiosity rock6 sitee bay2)
+  step 32: (move curiosity sitee sitec)
+  step 33: (move curiosity sitec sitea)
+  step 34: (move curiosity sitea base)
+  step 35: (deposit curiosity rock3 base bay1)
+  step 36: (deposit curiosity rock6 base bay2)
+  step 37: (move curiosity base sitea)
+  step 38: (collect-soft curiosity rock1 sitea bay1)
+  step 39: (move curiosity sitea base)
+  step 40: (deposit curiosity rock1 base bay1)
+
+  Total actions executed: 40
+
+  --- Final state ---
+  Rover at              : ['base']
+  Rocks at base         : ['rock1', 'rock2', 'rock3', 'rock4', 'rock5', 'rock6', 'rock7']
+  Empty bays            : ['bay1', 'bay2']
+  Rocks still in bays   : []
+
+  --- Goal check ---
+  (rock-at rock1 base)                   SATISFIED
+  (rock-at rock2 base)                   SATISFIED
+  (rock-at rock3 base)                   SATISFIED
+  (rock-at rock4 base)                   SATISFIED
+  (rock-at rock5 base)                   SATISFIED
+  (rock-at rock6 base)                   SATISFIED
+  (rock-at rock7 base)                   SATISFIED
+  (bay-empty bay1)                       SATISFIED
+  (bay-empty bay2)                       SATISFIED
+  (at curiosity base)                    SATISFIED
+
+  GOAL SATISFIED: True   (plan length = 40)
+

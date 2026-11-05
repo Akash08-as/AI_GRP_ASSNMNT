@@ -1,0 +1,17 @@
+=======================================================================
+Task 3 -- Plan Generation results (Fast Downward)
+=======================================================================
+
+                          BASE (Problem.pddl)        EXTENDED (Problem_extended.pddl)
+                          Satisficing   Optimal      Satisficing   Optimal
+Plan file                 Problem_      Problem_     Problem_ext_  Problem_ext_
+                          satisficing   optimal      satisficing   optimal
+Plan length (= cost)      30            25           46            40
+Total number of actions   30            25           46            40
+  move                    19            14           31            25
+  pick-drill              1             1            1             1
+  collect-soft            3             3            4             4
+  collect-hard            2             2            3             3
+  deposit                 5             5            7             7
+Base round trips          4             3            5             4
+Goal satisfied (Task 4)   yes           yes          yes           yes
